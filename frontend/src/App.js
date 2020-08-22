@@ -1,24 +1,44 @@
-import React from 'react';
-import './App.css';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useRef, useEffect } from 'react';
+import { useLocation, Switch } from 'react-router-dom';
+import AppRoute from './utils/AppRoute';
+import ScrollReveal from './utils/ScrollReveal';
+import ReactGA from 'react-ga';
 
-import Generate_page from './components/generate_page/generate_page';
-import SamplePlayer from './components/samplePlayer/samplePlayer'
-import Home from './components/home/home';
-import Nav from './components/nav/nav';
+// Layouts
+import LayoutDefault from './layouts/LayoutDefault';
 
-function App() {
+// Views 
+import Home from './views/Home';
+
+// Initialize Google Analytics
+ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+
+const trackPage = page => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
+
+const App = () => {
+
+  const childRef = useRef();
+  let location = useLocation();
+
+  useEffect(() => {
+    const page = location.pathname;
+    document.body.classList.add('is-loaded')
+    childRef.current.init();
+    trackPage(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
   return (
-    <Router>
-      <div>
-      <Nav />
+    <ScrollReveal
+      ref={childRef}
+      children={() => (
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/generate" exact component={Generate_page} />
-          <Route path="/samplePlayer" exact component={SamplePlayer} />
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
         </Switch>
-      </div>
-    </Router>
+      )} />
   );
 }
 
