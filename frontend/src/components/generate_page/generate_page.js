@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { FirebaseContext } from '../firebase';
+// import { FirebaseContext } from '../firebase';
+import HttpServiceClass from '../../services/http-services'
+
+var HttpService = new HttpServiceClass();
 
 class Generate_page extends Component {
 	constructor(props) {
@@ -11,27 +14,25 @@ class Generate_page extends Component {
           };
 	}
 
-	SomeComponent = () => (
-		<FirebaseContext.Consumer>
-			{(firebase) => {
-				return <div>I've access to Firebase and render something.</div>;
-			}}
-		</FirebaseContext.Consumer>
-	);
+	// SomeComponent = () => (
+	// 	<FirebaseContext.Consumer>
+	// 		{(firebase) => {
+	// 			return <div>I've access to Firebase and render something.</div>;
+	// 		}}
+	// 	</FirebaseContext.Consumer>
+	// );
 
 	componentDidMount() {
-        this.setState({ loading: true });
-     
-        this.props.firebase.songs().on('value', snapshot => {
-          this.setState({
-            songs: snapshot.val(),
-            loading: false,
-          });
-        });
-      }
+        HttpService.show_songs();
+    }
 
 	render() {
-		return this.SomeComponent();
+        // return this.SomeComponent();
+        return(
+        <div>
+            <p>generate page</p>
+        </div>
+        );
 	}
 }
 
