@@ -1,5 +1,4 @@
 import 'whatwg-fetch';
-import { Component } from 'react';
 import firebase from 'firebase';
 
 const firebaseApp = firebase.initializeApp({
@@ -16,25 +15,23 @@ const firebaseApp = firebase.initializeApp({
 const db = firebaseApp.firestore();
 var songs = db.collection('songs');
 
-class HttpServiceClass extends Component {
-	constructor(props) {
-        super(props);
+class HttpServiceClass {
+	constructor() {
         
         this.show_songs = this.show_songs.bind(this);
 	}
 
 	show_songs = () => {
+		var data = []
 		songs.get().then((querySnapshot) => {
 			//querySnapshot is "iteratable" itself
 			querySnapshot.forEach((userDoc) => {
-				//userDoc contains all metadata of Firestore object, such as reference and id
-				console.log(userDoc.id);
-
-				//If you want to get doc data
 				var userDocData = userDoc.data();
 				console.dir(userDocData);
+				data.push(userDocData);
 			});
 		});
+		return data;
 	};
 }
 
