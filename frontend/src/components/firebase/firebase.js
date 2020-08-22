@@ -1,4 +1,5 @@
 import app from 'firebase/app';
+import 'firebase/database';
 
 const config = {
     apiKey: "AIzaSyBe1fCTVFdOnEy9WobuBqzROq_DGenoQpA",
@@ -14,7 +15,11 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+    this.db = app.database();
   }
+
+  songs = () => this.db.ref('songs');
+
 }
 
 export default Firebase;
