@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Work+Sans:wght@300;500&display=swap');
+/* headings: Work Sans Light 300 and Medium 500
+   body: Lora Regular 400 */
+/* font-family: 'Lora', serif;
+font-family: 'Work Sans', sans-serif; */
+
+body, html {
+  height: 100%;
+}
+
+.container-fluid {
+  /* The image used */
+  background-image: ./assets/music.jpg);
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+h2.container-fluid, h3.container-fluid {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p.container-fluid {
+  font-family: 'Lora', serif;
+}
