@@ -16,7 +16,7 @@ function Nav() {
          <Link to="/">
             <li>About</li>
          </Link>
-         <Link to="/">
+         <Link to="/generate">
             <li>Try It!</li>
          </Link>
         </ul>
