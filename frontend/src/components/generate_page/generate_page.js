@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FirebaseContext } from '../Firebase';
+import { FirebaseContext } from '../firebase';
 
 
 class Generate_page extends Component {
