@@ -4,29 +4,30 @@
 /* font-family: 'Lora', serif;
 font-family: 'Work Sans', sans-serif; */
 
-body, html {
-  height: 100%;
+body,
+html {
+	height: 100%;
 }
 
 .container-fluid {
-  /* The image used */
-  background-image: ./assets/music.jpg);
+	/* The image used */
+	background-image: url("./assets/music.jpg");
 
-  /* Full height */
-  height: 100%;
+	/* Full height */
+	height: 100%;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-
-h2.container-fluid, h3.container-fluid {
-  font-family: 'Work Sans', sans-serif;
+h2.container-fluid,
+h3.container-fluid {
+	font-family: 'Work Sans', sans-serif;
 }
 
 p.container-fluid {
-  font-family: 'Lora', serif;
+	font-family: 'Lora', serif;
 }

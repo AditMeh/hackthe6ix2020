@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import firebaseApp from '../../services/FirebaseService.js';
 const { MIDIjs } = window
 
+
+const storage = firebaseApp.storage()
 
 class SamplePlayer extends Component {
     constructor(props) {
@@ -8,8 +11,10 @@ class SamplePlayer extends Component {
         this.play = this.play.bind(this)
     }
 
-    play() {
-        MIDIjs.play("The-Flight-Of-The-Bumble-Bee.mid")
+    async play() {
+        var s = storage.refFromURL('gs://songsmith-98875.appspot.com/cs1-1pre.mid')
+        const url = await s.getDownloadURL()
+        MIDIjs.play(url)
     }
 
     render() {
