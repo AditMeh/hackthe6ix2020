@@ -6,11 +6,10 @@ class Home extends Component {
 	render() {
 		return (
             <div className="container-fluid">
-                <h1>HOME</h1>
-						<div className="home">
+						<section className="home">
 						<h2> some creative catchphrase </h2>
 						<p>
-						// some catchy text with a basic explanation of what it does
+						basic explanation of what it does
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -19,9 +18,8 @@ class Home extends Component {
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum.
 						</p>
-            </div>
-						<div className="inspiration">
-						// what inspired the idea
+            </section>
+						<section className="inspiration">
 						<h3> Inspiration </h3>
 						<p>
 						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -31,8 +29,8 @@ class Home extends Component {
 						aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
 						eos qui ratione voluptatem sequi nesciunt.
 						</p>
-						</div>
-						<div className="about">
+						</section>
+						<section className="about">
 						<h3> How it works </h3>
 						<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -68,7 +66,7 @@ class Home extends Component {
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat.
 						</p>
-						</div>
+						</section>
 						</div>
 
 
