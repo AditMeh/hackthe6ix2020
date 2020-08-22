@@ -48,7 +48,7 @@ class Generate_page extends Component {
 
 		for (let i = 0; i < this.state.songs.length; i++) {
 			// console.log(this.state.songs[i]);
-			if (name === this.state.songs[i].title) {
+			if (this.state.songs[i].title.toLowerCase().includes(name.toLowerCase())) {
 				list1.push(this.state.songs[i]);
 			} else if (name === '') {
 				list1.push(this.state.songs[i]);
@@ -70,11 +70,9 @@ class Generate_page extends Component {
 
 	handleChange(event) {
 		this.setState({ value: event.target.value });
-		console.log('EVENT', event.target.value);
 	}
 
-	handleSubmit(event) {
-		alert('An essay was submitted: ' + this.state.value);
+	handleSubmit(event) { // send data thru http
 		event.preventDefault();
 	}
 
@@ -83,7 +81,7 @@ class Generate_page extends Component {
 		return (
 			<div className="container-fluid">
 
-        
+
 				<div className="row search-bar-row">
 					<div className="col-12 search-bar-col">
 						<form className="search-form" onSubmit={this.handleSubmit}>
