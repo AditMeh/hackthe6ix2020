@@ -1,33 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Work+Sans:wght@300;500&display=swap');
+
 /* headings: Work Sans Light 300 and Medium 500
    body: Lora Regular 400 */
 /* font-family: 'Lora', serif;
 font-family: 'Work Sans', sans-serif; */
-
 body,
 html {
-	height: 100%;
+  height: 100%;
 }
 
 .container-fluid {
-	/* The image used */
-	background-image: url("./assets/music.jpg");
-
-	/* Full height */
-	height: 100%;
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
 }
 
 h2.container-fluid,
 h3.container-fluid {
-	font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 p.container-fluid {
-	font-family: 'Lora', serif;
+  font-family: 'Lora', serif;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+section::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1.5px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.home::after {
+  background-image: url('./assets/background1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inspiration::after {
+  background-image: url('./assets/background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about:after {
+  background-image: url('./assets/background3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

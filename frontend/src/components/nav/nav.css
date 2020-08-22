@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Work+Sans:wght@300;500&display=swap");
+
+
+.navbar {
+  display: flex;
+  min-height: 3vh;
+  background: #123c69;
+  z-index: 4;
+  width: 100vw;
+  padding: 1vh 3vw 1vh 3vw;
+  margin: 0;
+}
+
+.logo {
+  padding-top: 8px;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar a {
+  color: #edc7b7;
+  font-family: 'Work Sans';
+  font-size: 1.45em;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: #bab285;
+  transform: scale(1.05);
+  font-family: 'Work Sans';
+  text-decoration: none;
+}
+
+.navbar a:visited {
+  color: #eee2dc;
+  font-family: 'Work Sans';
+}
