@@ -22,14 +22,32 @@ class Generate_page extends Component {
 					artist: '',
 					storagelink: ''
 				}
-			]
+      ],
+      curtitle: "Suite No. 1 in G major - Allemande",
+      curartist: "Bach",
+      curoglink: "https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/mp3_gen%2Fgen_cs2-4sar.mp3?alt=media&token=d6b0f1d4-670b-4093-846d-d9682c241d40",
+      curgenlink: "https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/mp3_gen%2Fgen_cs2-4sar.mp3?alt=media&token=d6b0f1d4-670b-4093-846d-d9682c241d40"
 		};
 
 		this.loadsongs = this.loadsongs.bind(this);
-		this.songlist = this.songlist.bind(this);
+    this.songlist = this.songlist.bind(this);
+    this.loadaudio = this.loadaudio.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-	}
+  }
+
+  loadaudio = (stitle, slink) => {
+    var wasd = this.state.curtitle;
+    console.log("DAWDHAWUI DHWA", slink)
+    return (
+      <Audio
+      title={stitle}
+      artist="Bach"
+      storagelink="https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/mp3_gen%2Fgen_cs2-4sar.mp3?alt=media&token=d6b0f1d4-670b-4093-846d-d9682c241d40"
+    />
+    )
+  }
+
 
 	loadsongs = () => {
 		HttpService.show_songs()
@@ -48,7 +66,7 @@ class Generate_page extends Component {
 
 		for (let i = 0; i < this.state.songs.length; i++) {
 			// console.log(this.state.songs[i]);
-			if (this.state.songs[i].title.toLowerCase().includes(name.toLowerCase())) {
+			if (this.state.songs[i].title.toLowerCase().trim().includes(name.toLowerCase().trim())) {
 				list1.push(this.state.songs[i]);
 			} else if (name === '') {
 				list1.push(this.state.songs[i]);
@@ -56,16 +74,16 @@ class Generate_page extends Component {
 		}
 
 		list2 = list1.map((item) => (
-			<li>
+			<div className="song-item">
 				{item.title}, {item.artist}
-			</li>
+			</div>
 		));
 		return list2;
 	};
 
 	componentDidMount() {
 		this.loadsongs();
-		console.log(this.state.value);
+		// console.log(this.state.value);
 	}
 
 	handleChange(event) {
@@ -74,7 +92,21 @@ class Generate_page extends Component {
 
 	handleSubmit(event) {
 		// send data thru http
-		event.preventDefault();
+    event.preventDefault();
+    HttpService.get_song_info(this.state.value).then((newdata) => {
+      this.setState({curtitle: newdata.title});
+      this.setState({curoglink: newdata.ogurl});
+      this.setState({curgenlink: newdata.genurl});
+      // console.log(this.state.curgenlink);
+      if (newdata){
+        HttpService.get_song_info(" "+this.state.value).then((newdata) => {
+          this.setState({curtitle: newdata.title});
+          this.setState({curoglink: newdata.ogurl});
+          this.setState({curgenlink: newdata.genurl});
+          // console.log(this.state.curgenlink);
+        });
+      }
+    });
 	}
 
 	render() {
@@ -97,32 +129,34 @@ class Generate_page extends Component {
 									onChange={this.handleChange}
 								/>
 								<button type="submit" className="search-submit-btn">
-									Search
+									Submit
 								</button>
 							</form>
 						</div>
 					</div>
 				</div>
 
-      
 				<div className="row search-results-row">
+					{/* <div className="col-4" /> */}
 					<div className="col-12 search-results-col">
-						<div className="search-results">{this.songlist(this.state.value)}</div>
+							<div className="search-results">{this.songlist(this.state.value)}</div>
 					</div>
+					{/* <div className="col-4" /> */}
 				</div>
 
 				<div className="row original-song-row">
 					<div className="col-12 original-song-col">
-						<Audio
-							title={this.state.songs[0].title}
-							artist="eman"
-							storagelink="https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/cs2-1pre.wav?alt=media&token=ce2e8ff6-2527-4210-8fd2-bfee0c1b0bce"
-						/>
+						{/* <Audio
+							title={this.state.curtitle}
+              artist={this.state.curartist}
+							storagelink={this.state.curgenlink}
+						/> */}
+            {this.loadaudio(this.state.curtitle, this.state.curgenlink)}
 					</div>
 				</div>
 
 				<div className="row spacer-row">
-					<div className="col-12 spacer-col">SPACE</div>
+					{/* <div className="col-12 spacer-col">SPACE</div> */}
 				</div>
 
 				<div className="row new-song-row">

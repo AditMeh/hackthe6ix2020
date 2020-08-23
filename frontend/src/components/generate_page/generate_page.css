@@ -20,14 +20,16 @@
 }
 
 .form-header {
+  font-family: montserrat;
+
   text-align: center;
   font-size: 4vw;
 }
 
 .search-form {
-  align-content: center;
-  align-items: center;
-
+  font-family: montserrat;
+  text-align: center;
+  font-size: 1.1vw;
 }
 
 .search-bar-label {
@@ -35,9 +37,60 @@
 }
 
 .search-bar-inp {
-
+  font-size: 1.1vw;
 }
 
 .search-submit-btn {
+  border: none;
+  font-family: montserrat;
+  padding: .4%;
+  background-color: #141520;
+  color: white;
+  transition: .2s;
+  margin: auto;
 
+}
+
+.search-submit-btn:hover{
+  font-family: montserrat;
+  background-color: #141520;
+  transition: 0.33s; 
+  color: #CD2438;
+}
+
+.search-submit-btn:focus, .search-submit-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* SECTION 2 */
+.search-results-row {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-results-col {
+}
+
+
+.search-results {
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  height: 60vh;
+}
+
+.song-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 6vh;
+  margin-right: 6vh;
 }

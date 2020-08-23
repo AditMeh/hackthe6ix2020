@@ -11,26 +11,29 @@ var songs = db.collection('songs');
 class HttpServiceClass {
 	constructor() {
 		this.show_songs = this.show_songs.bind(this);
+		this.get_song_info = this.get_song_info.bind(this);
 	}
 
 	show_songs = async () => {
 		var data = [];
 		await songs.get().then((querySnapshot) => {
-			//querySnapshot is "iteratable" itself
 			querySnapshot.forEach((userDoc) => {
 				var userDocData = userDoc.data();
-				// console.dir(userDocData);
 				data.push(userDocData);
 			});
 		});
 		return data;
 	};
 
-	search_for_song = async () => {
-		await axios.post('http://localhost:4000/recieve/songname').then((response) => {
-			console.log(response.data);
-			return response.data;
+	get_song_info = async (song) => {
+		var data = {};
+		await songs.where('title', '==', song).get().then(function(querySnapshot) {
+			querySnapshot.forEach(function(doc) {
+				console.log(doc.id, ' => ', doc.data());
+				data = doc.data();
+			});
 		});
+		return data;
 	};
 }
 
