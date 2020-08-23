@@ -50,7 +50,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'About',
+    title: 'About Songsmith',
     paragraph: "Discover, inspire, and listen to your heart's content with our innovative AI Machine Learning Neural Networks"
   };
 
