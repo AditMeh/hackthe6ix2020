@@ -51,7 +51,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: 'About',
-    paragraph: 'About our project'
+    paragraph: "Discover, inspire, and listen to your heart's content with our innovative AI Machine Learning Neural Networks"
   };
 
   return (
@@ -73,7 +73,7 @@ const FeaturesSplit = ({
                   Inspiration
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Ever listen to your favourite artists and songs and wish you had more similar music? We had this exact feeling, which is why we've developed SongSmith for music-loving people like you.
                   </p>
               </div>
               <div className={
@@ -83,7 +83,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
+                  src={require('./../../assets/images/features-split-art-01.png')}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -99,7 +99,8 @@ const FeaturesSplit = ({
                   How it works
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Our music generative neural network was developed using a state-of-the-art architecture called
+                Attention Mechanism Networks, including Tensorflow, Keras, and Google Colab.
                   </p>
               </div>
               <div className={
@@ -109,7 +110,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                  src={require('./../../assets/images/features-split-art-02.png')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
