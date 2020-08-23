@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation, Switch } from 'react-router-dom';
+import {HashRouter as Router, Route, useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
+import Generate_page from './components/generate_page/generate_page'
 
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
@@ -36,7 +37,8 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <Route path="/" exact component={Home} layout={LayoutDefault} />
+          <Route path="/generate" exact component={Generate_page} layout={LayoutDefault} />
         </Switch>
       )} />
   );

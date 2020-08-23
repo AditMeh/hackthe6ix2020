@@ -128,11 +128,11 @@ class Generate_page extends Component {
 
 				<div className="row new-song-row">
 					<div className="col-12 new-song-col">
-						<Audio
+						{/* <Audio
 							title={this.state.songs[0].title}
 							artist="eman"
 							storagelink="https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/trap_anthem.ogg?alt=media&token=8f63883b-f04b-4083-909a-e533a046a454"
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,135 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/audioplayer/styles.scss":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-5-4!./src/components/audioplayer/styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt);"]);
+// Module
+exports.push([module.i, ".App {\n  font-family: sans-serif;\n  text-align: center; }\n\n.player {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 0;\n  background-color: #212527; }\n  .player .song {\n    -webkit-user-select: none;\n            user-select: none;\n    margin: 0 20px; }\n    .player .song .song__title {\n      text-align: left;\n      margin: 0;\n      color: white;\n      font-family: Montserrat, cursive;\n      font-weight: normal;\n      font-size: 3.5em; }\n      .player .song .song__title:hover {\n        color: greenyellow; }\n    .player .song .song__artist {\n      margin: 0;\n      color: white;\n      font-family: Montserrat, cursive;\n      font-weight: normal;\n      font-size: 1em; }\n      .player .song .song__artist:hover {\n        color: greenyellow;\n        cursor: pointer; }\n  .player .controls {\n    flex-grow: 1;\n    margin: 0 20px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center; }\n  .player .player__button {\n    width: -moz-fit-content;\n    width: fit-content;\n    margin-bottom: 15px;\n    background-color: transparent;\n    border: none; }\n    .player .player__button:focus {\n      outline: none; }\n    .player .player__button:hover {\n      cursor: pointer; }\n      .player .player__button:hover svg {\n        color: greenyellow; }\n    .player .player__button svg {\n      font-size: 4em;\n      color: white; }\n  .player .bar {\n    -webkit-user-select: none;\n            user-select: none;\n    width: 100%;\n    display: flex;\n    align-items: center; }\n    .player .bar .bar__time {\n      color: white;\n      font-size: 16px; }\n    .player .bar .bar__progress {\n      flex: 1 1;\n      border-radius: 5px;\n      margin: 0 20px;\n      height: 10px;\n      display: flex;\n      align-items: center;\n      cursor: pointer; }\n      .player .bar .bar__progress .bar__progress__knob {\n        position: relative;\n        height: 16px;\n        width: 16px;\n        border: 1.5px solid white;\n        border-radius: 50%;\n        background-color: orange; }\n  @media screen and (max-width: 800px) {\n    .player {\n      flex-direction: column; }\n      .player .controls {\n        width: 100%;\n        margin-top: 20px; }\n      .player .bar {\n        width: 90%; } }\n  @media screen and (max-width: 500px) {\n    .player .song .song__title {\n      font-size: 2.5em; }\n    .player .song .song__artist {\n      font-size: 0.8em; } }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./src/components/audioplayer/styles.scss":
+/*!************************************************!*\
+  !*** ./src/components/audioplayer/styles.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-5-4!./styles.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/audioplayer/styles.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-5-4!./styles.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/audioplayer/styles.scss", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../../../node_modules/sass-loader/dist/cjs.js??ref--6-oneOf-5-4!./styles.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/audioplayer/styles.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! history */ "./node_modules/history/esm/history.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/scss/style.scss */ "./src/assets/scss/style.scss");
+/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_audioplayer_styles_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/audioplayer/styles.scss */ "./src/components/audioplayer/styles.scss");
+/* harmony import */ var _components_audioplayer_styles_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_audioplayer_styles_scss__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "C:\\Users\\MowMowChow\\Documents\\Programming\\hackthe6ix2020\\frontend\\src\\index.js";
+
+
+
+
+
+
+
+
+
+const history = Object(history__WEBPACK_IMPORTED_MODULE_3__["createBrowserHistory"])();
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Router"], {
+  history: history,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17,
+    columnNumber: 3
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18,
+    columnNumber: 5
+  }
+})), document.getElementById('root')); // If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+
+_serviceWorker__WEBPACK_IMPORTED_MODULE_5__["unregister"]();
+
+/***/ })
+
+})
+//# sourceMappingURL=main.60f8b4d723373b2ab958.hot-update.js.map
