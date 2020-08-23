@@ -61,16 +61,17 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Listen to some <span className="text-color-primary">cool</span> music
+              New remixes at your <span className="text-color-primary">fingertips</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                This is some text explaining how our app works
+              With SongSmith, you'll never have to search for songs again
+              <span className="text-color-warning"> Listen Now </span>
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
               <ButtonGroup>
                <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                 Get started
+                 Listen now
                  </Button>
                   </ButtonGroup>
               </div>

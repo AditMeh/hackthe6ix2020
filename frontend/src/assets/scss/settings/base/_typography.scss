@@ -1,12 +1,13 @@
 // Typography
 
 $font--provider:    'Google Fonts';
-$font--import:      'Inter:400,500,600,700,800';
+$font--import:      'Montserrat:400,500,600,700,800';
+$font--import:      'Nunito:400,500,600,700,800';
 
 // The font set
 $font--family: (
-	heading: 	null,
-	base:		'"Inter", sans-serif',
+	heading: 	'"Montserrat", sans-serif',
+	base:		'"Nunito", sans-serif',
 	code: 		'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace',
 	pre: 		'"Courier 10 Pitch", Courier, monospace'
 );
