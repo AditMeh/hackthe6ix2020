@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "algoliasearch": "^4.4.0",
     "axios": "^0.20.0",
+    "bg-sound": "^2.0.0",
     "classnames": "^2.2.6",
     "firebase": "^7.19.0",
     "moment": "^2.27.0",

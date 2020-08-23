@@ -104,6 +104,7 @@ class Generate_page extends Component {
 					</div>
 				</div>
 
+      
 				<div className="row search-results-row">
 					<div className="col-12 search-results-col">
 						<div className="search-results">{this.songlist(this.state.value)}</div>
