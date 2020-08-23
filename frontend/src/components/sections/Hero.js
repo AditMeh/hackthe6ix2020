@@ -68,10 +68,10 @@ const Hero = ({
                 This is some text explaining how our app works
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                 <ButtonGroup>
-                    <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                      Listen Now
-                    </Button>
+              <ButtonGroup>
+               <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                 Get started
+                 </Button>
                   </ButtonGroup>
               </div>
             </div>
