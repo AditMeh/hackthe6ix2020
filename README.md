@@ -2,6 +2,8 @@
 
 SongSmith is the one-stop-shop to **create new remixes from your favourite songs!** 🎼
 
+https://youtu.be/HFFj9vgsSwg
+
 **State of the Art AI Machine Learning Neural Networks** are used to generate remixes with similar styles to your best-loved songs. 
 
 **📚Discover! 👨‍🎤Inspire! Listen!🎧 SongSmith!**
