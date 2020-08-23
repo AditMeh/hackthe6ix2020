@@ -1,28 +1,29 @@
 // Colors
 
 // The color palette
+// the dark colours are named "light" and the light colours are named "dark" because i didn't wanna switch every single thing at the bottom
 $palette: (
 	light: (
-		1: #ECEDED,
-		2: #9CA9B3,
-		3: #717D86
+		1: #141520,
+		2: #2F314B,
+		3: #141158
 	),
 	dark: (
-		1: #151719,
-		2: #25282C,
-		3: #33363A
+		1: #FFFFFF,
+		2: #9CA9B3,
+		3: #ECEDED
 	),
 	primary: (
-		1: #6163FF,
-		2: #ACADFF,
-		3: #5658DD,
-		4: #E9E9FF
+		1: #CD2438,
+		2: #CD2437,
+		3: #CD2436,
+		4: #CD2435
  	),
 	secondary: (
-		1: #24E5AF,
-		2: #73EFCC,
-		3: #1CB68B,
-		4: #D2F9EE
+		1: #269AC9,
+		2: #269AC8,
+		3: #8127D0,
+		4: #8127D1
 	),
 	alert: (
 		error: #FF6171,
@@ -38,7 +39,7 @@ $color: (
 	high-contrast: 			get-color(light, 1),
 	mid-contrast: 			get-color(light, 2),
 	low-contrast: 			get-color(light, 3),
-	primary:				get-color(primary, 3),
+	primary:				get-color(primary, 1),
 	secondary:				get-color(secondary, 1),
 	error:					get-color(alert, error),
 	warning:				get-color(alert, warning),
@@ -65,7 +66,7 @@ $icon--color: (
 	social-hover: 			get-color(primary, 2),			// social icons (:hover)
 	modal:					get-color(light, 3),			// modal icon
 	modal-hover:			get-color(light, 2),			// modal icon (:hover)
-    news-more:			    get-color(primary, 2),		// news - read more link arrow    
+    news-more:			    get-color(primary, 2),		// news - read more link arrow
 	// ↓ Inverted colors
 	hamburger-inverse:		get-color(dark, 2),				// hamburger icon
 	accordion-inverse:		get-color(primary, 1),			// accordion icon
