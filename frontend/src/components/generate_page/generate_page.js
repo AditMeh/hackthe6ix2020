@@ -72,7 +72,8 @@ class Generate_page extends Component {
 		this.setState({ value: event.target.value });
 	}
 
-	handleSubmit(event) { // send data thru http
+	handleSubmit(event) {
+		// send data thru http
 		event.preventDefault();
 	}
 
@@ -80,51 +81,48 @@ class Generate_page extends Component {
 		// return this.SomeComponent();
 		return (
 			<div className="container-fluid">
-
-
 				<div className="row search-bar-row">
 					<div className="col-12 search-bar-col">
-						<form className="search-form" onSubmit={this.handleSubmit}>
-							<label htmlFor="search-input" className="search-bar-label">
-								Search for an Artist
-							</label>
-							<input
-								name="search-input"
-								type="text"
-								className="search-bar-inp"
-								value={this.state.value}
-								onChange={this.handleChange}
-							/>
-							<button type="submit" className="search-submit-btn">
-								Search
-							</button>
-						</form>
+						<div className="form-wrapper">
+							<header className="form-header">Search Our Database</header>
+							<form className="search-form" onSubmit={this.handleSubmit}>
+								<label htmlFor="search-input" className="search-bar-label">
+									Search for an Artist
+								</label>
+								<input
+									name="search-input"
+									type="text"
+									className="search-bar-inp"
+									value={this.state.value}
+									onChange={this.handleChange}
+								/>
+								<button type="submit" className="search-submit-btn">
+									Search
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
-
 
 				<div className="row search-results-row">
 					<div className="col-12 search-results-col">
 						<div className="search-results">{this.songlist(this.state.value)}</div>
 					</div>
-				</div
-        >
+				</div>
 
 				<div className="row original-song-row">
 					<div className="col-12 original-song-col">
 						<Audio
 							title={this.state.songs[0].title}
 							artist="eman"
-							storagelink="https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/trap_anthem.ogg?alt=media&token=8f63883b-f04b-4083-909a-e533a046a454"
+							storagelink="https://firebasestorage.googleapis.com/v0/b/songsmith-98875.appspot.com/o/cs2-1pre.wav?alt=media&token=ce2e8ff6-2527-4210-8fd2-bfee0c1b0bce"
 						/>
 					</div>
 				</div>
 
-
 				<div className="row spacer-row">
 					<div className="col-12 spacer-col">SPACE</div>
 				</div>
-
 
 				<div className="row new-song-row">
 					<div className="col-12 new-song-col">

@@ -1,3 +1,20 @@
 .container-fluid {
   height: 100% !important;
 }
+
+.search-bar-row { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-col {
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
